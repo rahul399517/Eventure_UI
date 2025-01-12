@@ -1,16 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import concert from "@/app/images/concert.webp";
 import concert1 from "@/app/images/concert1.jpg";
 import concert2 from "@/app/images/concert2.jpg";
 import Image from "next/image";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from "@/app/header/page";
 
 const AllEventsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    // Dynamically import Bootstrap JS
+    import("bootstrap/dist/js/bootstrap.bundle.min.js").catch((err) =>
+      console.error("Bootstrap JS failed to load", err)
+    );
+  }, []);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -19,7 +23,7 @@ const AllEventsPage = () => {
   return (
     <div className="d-flex flex-column min-vh-100 bg-light">
       {/* Navbar */}
-    <Navbar/>
+      <Navbar />
 
       {/* Main Content */}
       <main className="flex-grow-1 py-5">
