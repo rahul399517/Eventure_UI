@@ -1,13 +1,17 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
+import Navbar from "../header/page";
 const LoginPage = () => {
-  return (
-    <div className="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+  return (<>
+
+  <div className="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+      
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-5 col-md-7 col-sm-10">
             <div className="card shadow-lg border-0 rounded-lg">
+            <Navbar/>
               <div className="card-header bg-primary text-white text-center py-4">
                 <h2 className="fw-bold">Event Manager</h2>
                 <p className="mb-0">Login to manage and view your events</p>
@@ -89,6 +93,8 @@ const LoginPage = () => {
         </div>
       </div>
     </div>
+  </>
+   
   );
 };
 
