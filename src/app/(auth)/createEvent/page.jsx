@@ -13,7 +13,7 @@ const CreateEventPage = () => {
 
       {/* Main Content */}
       <main className="flex-grow-1 py-2">
-        <div className="m-5">
+        <div className="m-1">
           <div className="row">
             {/* Left Section */}
             <div className="col-lg-3 mb-4">
